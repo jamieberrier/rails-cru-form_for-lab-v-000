@@ -18,11 +18,11 @@ class GenresController < ApplicationController
   end
 
   def edit
-    @genre = Artist.find(params[:id])
+    @genre = Genre.find(params[:id])
   end
 
   def update
-    @genre = Artist.find(params[:id])
+    @genre = Genre.find(params[:id])
     @genre.update(artist_params(:name, :bio))
     redirect_to artist_path(@genre)
   end
