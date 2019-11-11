@@ -24,5 +24,7 @@ class ArtistsController < ApplicationController
 
   private
 
-  
+  def artist_params(*args)
+	  params.require(:student).permit(*args)
+	end
 end
