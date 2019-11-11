@@ -21,4 +21,8 @@ class ArtistsController < ApplicationController
 
   def update
   end
+
+  private
+
+  
 end
