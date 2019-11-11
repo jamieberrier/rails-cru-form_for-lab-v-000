@@ -22,6 +22,8 @@ class ArtistsController < ApplicationController
   end
 
   def update
+    @artist = Artist.find(params[:id])
+    @artist.update(artist_params(:title, :bio))
   end
 
   private
