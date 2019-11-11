@@ -30,6 +30,6 @@ class SongsController < ApplicationController
   private
 
   def song_params(*args)
-	  params.require(:genre).permit(*args)
+	  params.require(:song).permit(*args)
 	end
 end
