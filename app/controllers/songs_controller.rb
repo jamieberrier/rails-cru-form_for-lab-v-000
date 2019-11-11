@@ -1,20 +1,20 @@
 class SongsController < ApplicationController
   def index
-    @genres = Genre.all
+    @songs = Genre.all
   end
 
   def show
-    @genre = Genre.find(params[:id])
+    @song = Genre.find(params[:id])
   end
 
   def new
-    @genre = Genre.new
+    @song = Genre.new
   end
 
   def create
-    @genre = Genre.new(genre_params(:name))
-    @genre.save
-    redirect_to genre_path(@genre)
+    @song = Genre.new(genre_params(:name))
+    @song.save
+    redirect_to genre_path(@song)
   end
 
   def edit
