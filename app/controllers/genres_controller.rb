@@ -1,19 +1,19 @@
 class GenresController < ApplicationController
   def index
-    @artists = Artist.all
+    @genres = Artist.all
   end
 
   def show
-    @artist = Artist.find(params[:id])
+    @genre = Artist.find(params[:id])
   end
 
   def new
-    @artist = Artist.new
+    @genre = Artist.new
   end
 
   def create
-    @artist = Artist.new(artist_params(:name, :bio))
-    @artist.save
+    @genre = Artist.new(artist_params(:name, :bio))
+    @genre.save
     redirect_to artist_path(@artist)
   end
 
